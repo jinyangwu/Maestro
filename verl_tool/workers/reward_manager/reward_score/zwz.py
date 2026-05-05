@@ -135,7 +135,6 @@ def compute_score(solution_str, ground_truth, format_score=0.0, score=1., cost_c
             accuracy_score = 0.0
 
         # Debug print (similar to math.py)
-        # accuracy_score = 1
         import random   
         if random.randint(1, 64) == 1:  # 可以改为随机或条件打印
             print(f"[debug zwz] solution_str: {solution_str}")
@@ -149,7 +148,7 @@ def compute_score(solution_str, ground_truth, format_score=0.0, score=1., cost_c
             # Return both score and extracted answer
             if state == "train":
                 if format_score == -1.0:
-                    score_info = (accuracy_score, api_cost, format_score)
+                    score_info = (accuracy_score, api_cost, accuracy_score + format_score)
                 else:
                     if accuracy_score == 0:
                         score_info = (accuracy_score, api_cost, accuracy_score + format_score)

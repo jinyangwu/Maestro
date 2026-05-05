@@ -194,7 +194,7 @@ def compute_score(solution_str, ground_truth, method='strict', format_score=0., 
         # Return both score and extracted answer
         if state == "train":
             if format_score == -1.0:
-                score_info = (metric, api_cost, format_score)
+                score_info = (metric, api_cost, metric + format_score)
             else:
                 if metric == 0:
                     score_info = (metric, api_cost, metric + format_score)

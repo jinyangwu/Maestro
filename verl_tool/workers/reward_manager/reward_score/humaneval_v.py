@@ -109,7 +109,7 @@ def compute_score(
         metric_em = metric
         metric_f1 = metric
         if format_score == -1.0:
-            score_info = (metric_em, metric_f1, api_cost, format_score)
+            score_info = (metric_em, metric_f1, api_cost, metric + format_score)
         elif metric == 0:
             score_info = (metric_em, metric_f1, api_cost, metric + format_score)
         else:
