@@ -39,7 +39,6 @@ class NoSkill:
 
     def generate(self):
         try:
-            # import pdb; pdb.set_trace()
             outputs = self.client.chat.completions.create(
                 model=self.model,
                 messages=self.messages,
@@ -47,7 +46,6 @@ class NoSkill:
                 top_p=self.top_p,
                 timeout=self.timeout
             )
-            # import pdb; pdb.set_trace()
             return outputs
         except Exception as e:
             print(f"生成响应时出错: {e}")

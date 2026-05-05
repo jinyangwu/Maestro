@@ -58,7 +58,6 @@ class SkillFactory:
         self.dataset = dataset
     
     def get_skill(self, skill):
-        # import pdb; pdb.set_trace()
         if skill.skill_name == "none":
             return NoSkill(skill = skill, client = self.client, model = self.model, system_prompt = self.system_prompt, question = self.question, images = self.images, temperature = self.temperature, top_p = self.top_p, timeout = self.timeout, have_image = self.have_image)
         elif skill.skill_name in {"Geometric_Problem_Solver", "geometric_problem_solver", "geometric-problem-solver"}:

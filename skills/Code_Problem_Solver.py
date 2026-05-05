@@ -296,7 +296,6 @@ class Code_Problem_Solver:
 
         test_assert = ""
         for extract_round in range(2):
-            # import pdb; pdb.set_trace()
             test_outputs = self._call_model(self._build_test_prompt(self._build_stub_code()), include_images=True)
             self._accumulate_usage(usage_totals, test_outputs)
             test_assert = self._normalize_assertion(self._extract_content(test_outputs))

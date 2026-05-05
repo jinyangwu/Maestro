@@ -97,13 +97,8 @@ Return a json object with function name and arguments within <tool_call></tool_c
         main_img_url = self.images[0]
         main_img_path = self.image_paths[0] if self.image_paths else None
 
-        # 1. 询问预审模型
-        # print(f"--- [DeepEyes-7B] 正在预审图像... ---")
-        # import pdb; pdb.set_trace()
-        # print(1)
+
         deepeyes_res = self._get_deepeyes_decision(main_img_url)
-        # print(2)
-        # import pdb; pdb.set_trace()
         if is_test:
             print("\n[Zoom Test] DeepEyes intermediate output:")
             print(deepeyes_res)
@@ -112,7 +107,6 @@ Return a json object with function name and arguments within <tool_call></tool_c
         
         # 2. 判断是否缩放
         if '<tool_call>' in deepeyes_res and main_img_path:
-            # print(f"--- [DeepEyes-7B] 发现关键区域，执行裁剪... ---")
             crop_url, _ = self._crop_image(main_img_path, deepeyes_res)
             
             prompt_text = (
@@ -128,7 +122,6 @@ Return a json object with function name and arguments within <tool_call></tool_c
                 final_content.append({"type": "image_url", "image_url": {"url": crop_url}})
             final_content.append({"type": "text", "text": prompt_text})
         else:
-            # print(f"--- [DeepEyes-7B] 无需放大，直接询问主模型 ---")
             final_content.append({"type": "image_url", "image_url": {"url": main_img_url}})
             final_content.append({"type": "text", "text": self.question})
 
@@ -142,7 +135,6 @@ Return a json object with function name and arguments within <tool_call></tool_c
         messages.append({"role": "user", "content": final_content})
 
         try:
-            # import pdb; pdb.set_trace()
             outputs = self.client.chat.completions.create(
                 model=self.model,
                 messages=messages,
@@ -150,8 +142,6 @@ Return a json object with function name and arguments within <tool_call></tool_c
                 top_p=self.top_p,
                 timeout=self.timeout
             )
-            # print(3)
-            # import pdb; pdb.set_trace()
             if is_test:
                 print("\n[Zoom Test] Main model output:")
                 if hasattr(outputs, 'choices') and outputs.choices:
@@ -160,6 +150,5 @@ Return a json object with function name and arguments within <tool_call></tool_c
                     print(outputs)
             return outputs
         except Exception as e:
-            return f"GLM模型响应出错: {e}"
+            return f"模型响应出错: {e}"
 
-# ================= 测试入口 =================
