@@ -221,5 +221,5 @@ Return a json object with function name and arguments within <tool_call></tool_c
                     print(outputs)
             return outputs
         except Exception as e:
-            return f"GLM模型响应出错: {e}"
+            return f"模型响应出错: {e}"
 
