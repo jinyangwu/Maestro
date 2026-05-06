@@ -366,7 +366,7 @@ if __name__ == "__main__":
     extra_info = {
         "answer": "The woman is to the left of the man who is holding the camera.",
         "id": 0,
-        "image": "/cpfs/user/honglingyi/DATA/LLM/Vstar/gqa/images/713270.jpg",
+        "image": "/path/images/713270.jpg",
         "pred_ans": "The woman is to the right of the man who is holding the camera.",
         "question": "Is the woman to the left or to the right of the man who is holding the camera?",
     }

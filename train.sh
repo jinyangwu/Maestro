@@ -4,7 +4,7 @@ set -x
 # source .venv/bin/activate
 
 # GPU settings - use GPU 0,1,2,3
-export CUDA_VISIBLE_DEVICES=0,1,2,3
+export CUDA_VISIBLE_DEVICES=2,4,6,7
 export RAY_memory_monitor_refresh_ms=250
 export RAY_memory_usage_threshold=0.98
 export RAY_DEBUG_INSTALL_LOCATION_THRESHOLD=0.99

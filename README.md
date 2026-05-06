@@ -2,6 +2,9 @@
 
 Maestro trains a multimodal agent that can call model skills during rollout. The repository includes example train/validation data under `data/` and skill implementations under `skills/`.
 
+The `verl` directory is included from an open-source codebase. Any names, paths, emails, institutional references, examples, or metadata in `verl` originate from the upstream repository and are unrelated to the authors of this project.
+
+
 ## Environment Setup
 
 Create a Python environment and install the dependencies from the repository root:
@@ -60,5 +63,3 @@ To train from a local checkpoint or a different model id, override `MODEL_NAME`:
 ```bash
 MODEL_NAME=/path/to/Qwen3-VL-4B-Thinking bash train.sh
 ```
-
-

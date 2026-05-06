@@ -16,7 +16,7 @@
 huggingface-cli download nvidia/OpenMathReasoning --repo-type dataset --include data/cot* \
     --local-dir /path/to/nvidia/OpenMathReasoning
 huggingface-cli download nvidia/OpenMathReasoning --repo-type dataset --include data/cot* \
-    --local-dir /opt/tiger/nvidia/OpenMathReasoning
+    --local-dir /path/OpenMathReasoning
 """
 
 import argparse

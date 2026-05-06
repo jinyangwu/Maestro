@@ -9,30 +9,6 @@ from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor
 from PIL import Image
 
-# Add skills directory to path
-# skills_path = os.path.join(os.path.dirname(__file__), '../../skills')
-# skills_path = os.path.abspath(skills_path)
-# if skills_path not in sys.path:
-#     sys.path.insert(0, skills_path)
-
-# Create a 'core.skills' module alias to support imports like 'from core.skills.xxx import ...'
-# This allows skills in the skills/ directory to import each other using the core.skills prefix
-# try:
-#     import types
-#     # Create core module if it doesn't exist
-#     if 'core' not in sys.modules:
-#         core_module = types.ModuleType('core')
-#         sys.modules['core'] = core_module
-#     # Create core.skills module pointing to the skills directory
-#     if 'core.skills' not in sys.modules:
-#         skills_module = types.ModuleType('core.skills')
-#         # Add skills directory to core.skills module's __path__
-#         skills_module.__path__ = [skills_path]
-#         sys.modules['core.skills'] = skills_module
-# except Exception as e:
-#     print(f"Warning: Could not create core.skills module alias: {e}")
-
-# Try to import skill-related modules
 try:
     from skills.factory import SkillFactory
     from skills.load_skills import load_skills

@@ -14,8 +14,8 @@
 
 # prepare eval dataset including AIME'24, AIME'25
 
-# hf download math-ai/aime24 --repo-type dataset --local-dir /opt/tiger/datasets/math-ai/aime24
-# hf download math-ai/aime25 --repo-type dataset --local-dir /opt/tiger/datasets/math-ai/aime25
+# hf download math-ai/aime24 --repo-type dataset --local-dir /path/aime24
+# hf download math-ai/aime25 --repo-type dataset --local-dir /path/aime25
 
 import os
 
