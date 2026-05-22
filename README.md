@@ -4,10 +4,10 @@ MAESTRO: Reinforcement Learning to Orchestrate Hierarchical Model-Skill Ensemble
 
 <div align="center">
 <p>
-    <a href="https://arxiv.org/abs/2605.15155">
-      <img src="https://img.shields.io/badge/Paper-arxiv%3A2605.15155-blue" alt="Paper"/>
+    <a href="https://arxiv.org/abs/2605.22177">
+      <img src="https://img.shields.io/badge/Paper-arxiv%3A2605.22177-blue" alt="Paper"/>
     </a>
-    <a href="https://huggingface.co/papers/2605.15155">
+    <a href="https://huggingface.co/papers/2605.22177">
       <img src="https://img.shields.io/badge/Daily%20Paper-huggingface-yellow" alt="HF Paper"/>
     </a>
   </p>
