@@ -3,12 +3,12 @@ MAESTRO: Reinforcement Learning to Orchestrate Hierarchical Model-Skill Ensemble
 </h1>
 
 <div align="center">
-  <p>
-    <a href="https://github.com/jinyangwu/Maestro">
-      <img src="https://img.shields.io/badge/Code-GitHub-black" alt="Code"/>
+<p>
+    <a href="https://arxiv.org/abs/2605.15155">
+      <img src="https://img.shields.io/badge/Paper-arxiv%3A2605.15155-blue" alt="Paper"/>
     </a>
-    <a href="https://github.com/jinyangwu/Maestro">
-      <img src="https://img.shields.io/badge/Project-MAESTRO-blue" alt="Project"/>
+    <a href="https://huggingface.co/papers/2605.15155">
+      <img src="https://img.shields.io/badge/Daily%20Paper-huggingface-yellow" alt="HF Paper"/>
     </a>
   </p>
 </div>
@@ -107,7 +107,10 @@ If you find this project useful, welcome to cite us.
       title={MAESTRO: Reinforcement Learning to Orchestrate Hierarchical Model-Skill Ensembles},
       author={Jinyang Wu and Guocheng Zhai and Ruihan Jin and Yuhao Shen and Zhengxi Lu and Fan Zhang and Haoran Luo and Zheng Lian and Zhengqi Wen and Jianhua Tao},
       year={2026},
-      url={https://github.com/jinyangwu/Maestro}
+      eprint={2605.22177},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2605.22177}, 
 }
 ```
 
